@@ -1,0 +1,12 @@
+specVersion: "v1beta"
+serviceId: "vocab-app"
+location: "us-central1"
+schema:
+  source: "./schema"
+  datasource:
+    postgresql:
+      database: "fdcdb"
+      cloudSql:
+        instanceId: "vocab-app-fdc"
+      # schemaValidation: "COMPATIBLE"
+connectorDirs: ["./connector"]
