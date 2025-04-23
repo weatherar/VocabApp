@@ -13,15 +13,13 @@
 // 	},
 // });
 import { defineConfig } from "vite";
+
 import react from "@vitejs/plugin-react";
-import tailwindcssPlugin from "@tailwindcss/postcss"; // ganti import ini
-import autoprefixer from "autoprefixer";
+import tailwindcss from "@tailwindcss/vite";
+
+
 
 export default defineConfig({
-	plugins: [react()],
-	css: {
-		postcss: {
-			plugins: [tailwindcssPlugin(), autoprefixer], // dan ini
-		},
-	},
+	plugins: [react(), tailwindcss()],
+	
 });

@@ -1,6 +1,7 @@
-@tailwind base;
+@import "tailwindcss";
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
 
 @layer base {
 	:root {
@@ -32,6 +33,7 @@ a:hover {
 }
 
 body {
+	overflow-x: hidden;
 	margin: 0;
 	display: flex;
 	place-items: center;
