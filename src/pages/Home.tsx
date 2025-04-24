@@ -311,14 +311,14 @@ export const Home = () => {
 						<button
 							onClick={handleGenerateVocabulary}
 							disabled={loading}
-							className="w-full sm:w-auto px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 disabled:opacity-50 transition-colors duration-200"
+							className="w-full sm:w-auto px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-black hover:bg-indigo-500 disabled:opacity-50 transition-colors duration-200"
 						>
 							{loading ? "Generating..." : "Generate Vocabulary"}
 						</button>
 						<button
 							onClick={handleClearVocabulary}
 							disabled={loading}
-							className="w-full sm:w-auto px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-red-600 hover:bg-red-700 disabled:opacity-50 transition-colors duration-200"
+							className="w-full sm:w-auto px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-red-500 hover:bg-black disabled:opacity-50 transition-colors duration-200"
 						>
 							Clear All
 						</button>

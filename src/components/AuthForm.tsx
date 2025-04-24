@@ -44,7 +44,7 @@ export const AuthForm = () => {
 	};
 
 	return (
-		<div className=" w-full mx-auto bg-gray-50 flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 p-4 xl:px-10 2xl:px-130">
+		<div className=" w-full mx-auto bg-gray-50 flex flex-col justify-center items-center p-4 sm:p-4 lg:p-8  xl:p-8 rounded-xl">
   <div className="w-full mx-auto overflow-hidden bg-white rounded-xl shadow-md  flex flex-col md:flex-row">
     {/* Gambar Robot - di atas pada mobile, di kiri pada tablet/desktop */}
     <div className="w-full md:w-1/2 bg-indigo-50 flex items-center justify-center p-8 order-1 md:order-none">
@@ -95,7 +95,7 @@ export const AuthForm = () => {
 
       <div className="mt-6 text-center">
         <button
-          className="text-indigo-600 hover:text-indigo-800 text-sm font-medium transition"
+          className="text-indigo-600 bg-indigo-50 hover:text-indigo-800 text-sm font-medium transition"
           onClick={() => setIsLogin(!isLogin)}
         >
           {isLogin
