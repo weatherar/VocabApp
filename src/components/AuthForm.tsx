@@ -45,66 +45,66 @@ export const AuthForm = () => {
 
 	return (
 		<div className=" w-full mx-auto bg-gray-50 flex flex-col justify-center items-center p-4 sm:p-4 lg:p-8  xl:p-8 rounded-xl">
-  <div className="w-full mx-auto overflow-hidden bg-white rounded-xl shadow-md  flex flex-col md:flex-row">
-    {/* Gambar Robot - di atas pada mobile, di kiri pada tablet/desktop */}
-    <div className="w-full md:w-1/2 bg-indigo-50 flex items-center justify-center p-8 order-1 md:order-none">
-      <img
-        src="/assets/robot_modif.svg" // Ganti dengan path gambar robot Anda
-        alt="Robot Illustratiod"
-        className="w-full max-w-xs h-auto object-contain"
-      />
-    </div>
+			<div className="w-full mx-auto overflow-hidden bg-white rounded-xl shadow-md  flex flex-col md:flex-row">
+				{/* Gambar Robot - di atas pada mobile, di kiri pada tablet/desktop */}
+				<div className="w-full md:w-1/2 bg-indigo-50 flex items-center justify-center p-8 order-1 md:order-none">
+					<img
+						src="/assets/robot_modif.svg" // Ganti dengan path gambar robot Anda
+						alt="Robot Illustratiod"
+						className="w-full max-w-xs h-auto object-contain"
+					/>
+				</div>
 
-    {/* Form Login */}
-    <div className="w-full md:w-1/2 p-8 order-2">
-      <h2 className="text-center text-2xl font-bold text-gray-900 mb-8">
-        {isLogin ? "Sign in to your account" : "Create new account"}
-      </h2>
+				{/* Form Login */}
+				<div className="w-full md:w-1/2 p-8 order-2">
+					<h2 className="text-center text-2xl font-bold text-gray-900 mb-8">
+						{isLogin ? "Sign in to your account" : "Create new account"}
+					</h2>
 
-      <form className="space-y-6" onSubmit={handleSubmit}>
-        <div className="space-y-4">
-          <input
-            type="email"
-            required
-            placeholder="Email address"
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          <input
-            type="password"
-            required
-            placeholder="Password"
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </div>
+					<form className="space-y-6" onSubmit={handleSubmit}>
+						<div className="space-y-4">
+							<input
+								type="email"
+								required
+								placeholder="Email address"
+								className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+								value={email}
+								onChange={(e) => setEmail(e.target.value)}
+							/>
+							<input
+								type="password"
+								required
+								placeholder="Password"
+								className="w-full px-4 py-3  border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+								value={password}
+								onChange={(e) => setPassword(e.target.value)}
+							/>
+						</div>
 
-        {error && (
-          <p className="text-red-500 text-sm text-center">{error}</p>
-        )}
+						{error && (
+							<p className="text-red-500 text-sm text-center">{error}</p>
+						)}
 
-        <button
-          type="submit"
-          className="w-full py-3 px-4 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-lg transition duration-200"
-        >
-          {isLogin ? "Sign in" : "Sign up"}
-        </button>
-      </form>
+						<button
+							type="submit"
+							className="w-full py-3 px-4 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-lg transition duration-200"
+						>
+							{isLogin ? "Sign in" : "Sign up"}
+						</button>
+					</form>
 
-      <div className="mt-6 text-center">
-        <button
-          className="text-indigo-600 bg-indigo-50 hover:text-indigo-800 text-sm font-medium transition"
-          onClick={() => setIsLogin(!isLogin)}
-        >
-          {isLogin
-            ? "Don't have an account? Sign up"
-            : "Already have an account? Sign in"}
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
+					<div className="mt-6 text-center">
+						<button
+							className="text-indigo-600 bg-indigo-50 hover:text-indigo-800 text-sm font-medium transition"
+							onClick={() => setIsLogin(!isLogin)}
+						>
+							{isLogin
+								? "Don't have an account? Sign up"
+								: "Already have an account? Sign in"}
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
 	);
 };

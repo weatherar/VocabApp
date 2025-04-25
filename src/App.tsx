@@ -86,7 +86,7 @@ const AppLayout = () => {
 	};
 
 	return (
-		<div className="min-h-screenw-full overflow-x-hidden flex flex-col ">
+		<div className="min-h-screen w-full flex flex-col ">
 			{!hideHeaderRoutes.includes(location.pathname) && (
 				<Header onSignOut={handleSignOut} />
 			)}

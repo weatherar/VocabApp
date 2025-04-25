@@ -15,7 +15,6 @@
 	}
 
 	body {
-		overflow: hidden;
 		height: 100%;
 		margin: 0;
 		padding: 0;
@@ -60,12 +59,13 @@ button {
 	font-weight: 500;
 	font-family: inherit;
 	/* background-color: #1a1a1a; */
+	/* color: #ffffff; */
 	cursor: pointer;
 	transition: border-color 0.25s;
 }
-/* button:hover {
+button:hover {
 	border-color: #ffffff;
-} */
+}
 button:focus,
 button:focus-visible {
 	outline: 4px auto -webkit-focus-ring-color;
