@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import dotenv from 'dotenv';
+dotenv.config();
 import "../index.css";
 // import { VocabularyList } from "../components/VocabularyList";
 import Header from "../components/Header";
@@ -288,7 +290,7 @@ export const Home = () => {
 			url: "https://grammar-genius.p.rapidapi.com/dev/grammar",
 			headers: {
 				"content-type": "application/json",
-				"X-RapidAPI-Key": "Y9336f8cc98msh585e9152e9cc1c8p1a03ecjsn584b38e55613", // Ganti dengan API key kamu
+				"X-RapidAPI-Key": "process.env.VITE_API_KEY", // Ganti dengan API key kamu
 				"X-RapidAPI-Host": "grammar-genius.p.rapidapi.com",
 			},
 			data: {
@@ -544,33 +546,6 @@ export const Home = () => {
 
 			<div className="min-h-screen w-screen overflow-x-hidden bg-gray-100 flex flex-col">
 				{/* Section 1: Header */}
-
-				{/* Section 2: Action Buttons */}
-				{/* <section className="bg-white border-b border-gray-200 w-full  overflow-x-hidden">
-					<div className="w-full px-4 sm:px-6 lg:px-8 py-4">
-						<div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-							<button
-								className="bg-blue-600 text-white px-4 py-2 rounded font-semibold hover:bg-blue-700 transition mb-4"
-								onClick={handleGenerateVocabulary}
-								disabled={loading}
-							>
-								{loading ? "Generating..." : "Generate Random Vocabulary"}
-							</button>
-							<button
-								onClick={handleClearVocabulary}
-								disabled={loading}
-								className="w-full sm:w-auto px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-red-500 hover:bg-black disabled:opacity-50 transition-colors duration-200"
-							>
-								Clear All
-							</button>
-						</div>
-						{loading && (
-							<div className="mt-3 text-sm text-gray-600 text-center">
-								✅ Success: {successCount} | ❌ Fail: {errorCount}
-							</div>
-						)}
-					</div>
-				</section> */}
 
 				{/* Section 2: Action Buttons */}
 				<section className="bg-white border-b border-gray-200 w-full overflow-x-hidden">

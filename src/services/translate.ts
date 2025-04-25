@@ -1,4 +1,6 @@
 import axios from "axios";
+import dotenv from 'dotenv';
+dotenv.config();
 
 export const translateWordService = async (word: string): Promise<string> => {
   try {
@@ -10,9 +12,9 @@ export const translateWordService = async (word: string): Promise<string> => {
       },
       {
         headers: {
-          "Content-Type": "application/json",
+          "Content-Type": "application/json", 
           "x-rapidapi-host": "openl-translate.p.rapidapi.com",
-          "x-rapidapi-key": "9336f8cc98msh585e9152e9cc1c8p1a03ecjsn584b38e55613"
+          "x-rapidapi-key":process.env.VITE_API_KEY
         }
       }
     );
@@ -36,7 +38,7 @@ export const translateIndoToEngService = async (word: string): Promise<string> =
         headers: {
           "Content-Type": "application/json",
           "x-rapidapi-host": "openl-translate.p.rapidapi.com",
-          "x-rapidapi-key": "9336f8cc98msh585e9152e9cc1c8p1a03ecjsn584b38e55613"
+          "x-rapidapi-key":process.env.VITE_API_KEY
         }
       }
     );
